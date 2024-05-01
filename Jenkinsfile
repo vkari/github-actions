@@ -4,158 +4,158 @@ pipeline {
     stages {
         stage('Checkout SCM') {
             steps {
-                // Checkout SCM code here
+                echo 'Checking out SCM code...'
             }
         }
         
         stage('Approval input only for prod') {
             steps {
-                // Add steps for approval input
+                echo 'Waiting for approval for production deployment...'
             }
         }
         
         stage('Checkout CMA repository') {
             steps {
-                // Checkout CMA repository code here
+                echo 'Checking out CMA repository...'
             }
         }
         
         stage('Initialize Variables') {
             steps {
-                // Initialize Variables here
+                echo 'Initializing variables...'
             }
         }
         
         stage('Pre Build Steps for Android/iOS') {
             steps {
-                // Pre Build Steps for Android/iOS here
+                echo 'Performing pre-build steps for Android/iOS...'
             }
         }
         
         stage('Node Modules Installation') {
             steps {
-                // Install Node Modules here
+                echo 'Installing Node modules...'
             }
         }
         
         stage('Pod Installation') {
             steps {
-                // Pod Installation here
+                echo 'Installing CocoaPods dependencies...'
             }
         }
         
         stage('Android Build Dependency Run') {
             steps {
-                // Android Build Dependency Run here
+                echo 'Running Android build dependencies...'
             }
         }
         
         stage('iOS Build Dependency Run') {
             steps {
-                // iOS Build Dependency Run here
+                echo 'Running iOS build dependencies...'
             }
         }
         
         stage('Unit Testing') {
             steps {
-                // Unit Testing here
+                echo 'Running unit tests...'
             }
         }
         
         stage('SonarQube') {
             steps {
-                // SonarQube analysis here
+                echo 'Running SonarQube analysis...'
             }
         }
         
         stage('Code Build Stage') {
             steps {
-                // Code Build Stage here
+                echo 'Performing code build stage...'
             }
         }
         
         stage('Build Android') {
             steps {
-                // Build Android here
+                echo 'Building Android app...'
             }
         }
         
         stage('Build iOS') {
             steps {
-                // Build iOS here
+                echo 'Building iOS app...'
             }
         }
         
         stage('Android aab Upload to Playstore') {
             steps {
-                // Upload Android aab to Playstore here
+                echo 'Uploading Android AAB to Play Store...'
             }
         }
         
         stage('Upload package to Nexus Repository') {
             steps {
-                // Upload package to Nexus Repository here
+                echo 'Uploading package to Nexus Repository...'
             }
         }
         
         stage('Upload Apk to Nexus Repository') {
             steps {
-                // Upload Apk to Nexus Repository here
+                echo 'Uploading APK to Nexus Repository...'
             }
         }
         
         stage('Upload Ipa to Nexus Repository') {
             steps {
-                // Upload Ipa to Nexus Repository here
+                echo 'Uploading IPA to Nexus Repository...'
             }
         }
         
         stage('QA Automation Jar creation') {
             steps {
-                // QA Automation Jar creation here
+                echo 'Creating QA automation JAR...'
             }
         }
         
         stage('QA Automation Test') {
             steps {
-                // QA Automation Test here
+                echo 'Running QA automation tests...'
             }
         }
         
         stage('Android QA Automation Test') {
             steps {
-                // Android QA Automation Test here
+                echo 'Running Android QA automation tests...'
             }
         }
         
         stage('iOS QA Automation Test') {
             steps {
-                // iOS QA Automation Test here
+                echo 'Running iOS QA automation tests...'
             }
         }
         
         stage('App Package Distribution to Firebase') {
             steps {
-                // App Package Distribution to Firebase here
+                echo 'Distributing app package to Firebase...'
             }
         }
         
         stage('Apk Distribution to Firebase') {
             steps {
-                // Apk Distribution to Firebase here
+                echo 'Distributing APK to Firebase...'
             }
         }
         
         stage('Ipa Distribution to Firebase') {
             steps {
-                // Ipa Distribution to Firebase here
+                echo 'Distributing IPA to Firebase...'
             }
         }
     }
     
     post {
         always {
-            // Declarative: Post Actions here
+            echo 'Performing post-build actions...'
         }
     }
 }
